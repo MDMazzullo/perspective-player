@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Perspective and Homography - OpenCV.js</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="flex-container">
+
+      <div class="inputoutput">
+        <img id="imageSrc" alt="No Image" style="display: none;"/>
+        <input type="file" id="fileInput" name="file" />
+      </div>
+      
+      <div class="inputoutput">
+        <canvas id="canvasOutput"></canvas>
+      </div>
+
+      <div id="homography-grid">
+          <input type="number" class="homography-input" value=1 step=0.01></input>
+          <input type="number" class="homography-input" value=0 step=0.01></input>
+          <input type="number" class="homography-input" value=0 step=1></input>
+          <input type="number" class="homography-input" value=0 step=0.01></input>
+          <input type="number" class="homography-input" value=1 step=0.01></input>
+          <input type="number" class="homography-input" value=0 step=1></input>
+          <input type="number" class="homography-input" value=0 step=0.001></input>
+          <input type="number" class="homography-input" value=0 step=0.001></input>
+          <input type="number" class="homography-input" value=1 step=0.01></input>
+      </div>
+
+      <button id="reset" onclick="resetMatrix();">Reset</button>
+
+    </div>
+
+    
+    <p id="status">OpenCV.js is loading...</p>
+
+    <script src="index.js" type="text/javascript"></script>
+    <script async src="https://docs.opencv.org/master/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+  </body>
+</html>
